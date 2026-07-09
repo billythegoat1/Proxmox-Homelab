@@ -1,0 +1,9 @@
+someone@pve:~ pct create [container_id] local:vztmpl/debian-13-standard_13.1-2_amd64.tar.zst \
+> --hostname [] \
+> --cores [] \
+> --memory [RAM] \
+> --swap 512 \
+> --net0 name=eth0,bridge=vmbr0,firewall=1,gw=[gateway_ip],ip=[Prefered_ID/CIDR \
+> --rootfs local-lvm:4 \
+> --unprivileged 1 \
+> --features nesting=1
