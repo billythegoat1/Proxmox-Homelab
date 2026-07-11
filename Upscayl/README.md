@@ -16,20 +16,8 @@ instead of running Upscayl locally on a laptop.
 
 ## Architecture
 
-```
-Client (any device on the LAN)
-        │  HTTP (upload / download)
-        ▼
-Proxmox host
-  └── GPU (/dev/dri/renderD128, /dev/dri/card0)
-        │  device passthrough (gid-mapped, unprivileged LXC)
-        ▼
-  LXC container
-        ├── Vulkan driver — GPU compute API
-        ├── realesrgan-ncnn-vulkan — runs the AI model
-        ├── model files (.bin/.param weights)
-        └── Flask app (app.py) — web front end, calls the binary via subprocess
-```
+<img width="1578" height="997" alt="Architecture_Upscayl" src="https://github.com/user-attachments/assets/90c9ab66-8149-4231-9a0a-74c320f85788" />
+
 
 ## Setup
 
